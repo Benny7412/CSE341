@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
+const lesson1Controller = require("./controllers/lesson1");
 
-app.get("/", (req, res) => {
-  res.send("Hello Worldsgit config --list --show-origin | grep -E 'user.name|user.email'");
-});
+app.get("/", lesson1Controller.emilyRoute);
+
+app.get("/blah", lesson1Controller.blahRoute);
 
 const port = 3000;
 
